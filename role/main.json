@@ -25,10 +25,6 @@
           "uri": "https://raw.githubusercontent.com/robkae/ARM/refs/heads/main/storage/storage.json",
           "contentVersion": "1.0.0.0"
         },
-        "templateLink": {
-          "uri": "https://raw.githubusercontent.com/robkae/ARM/refs/heads/main/TAGS/tags.json",
-          "contentVersion": "1.0.0.0"
-        },
         "parameters": {
           "location": { "value": "[parameters('location')]" },
           "tags": { "value": "[variables('tags')]" }

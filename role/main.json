@@ -7,18 +7,26 @@
       "defaultValue": "[resourceGroup().location]"
     }
   },
-  "variables": {
-    "tags": {
-      "Environment": "Dev",
-      "Owner": "CloudTeam",
-      "CostCenter": "FreeTier"
-    }
-  },
   "resources": [
     {
       "type": "Microsoft.Resources/deployments",
       "apiVersion": "2021-04-01",
+      "name": "tagsDeployment",
+      "properties": {
+        "mode": "Incremental",
+        "templateLink": {
+          "uri": "https://raw.githubusercontent.com/robkae/ARM/refs/heads/main/tags/tags.json",
+          "contentVersion": "1.0.0.0"
+        }
+      }
+    },
+    {
+      "type": "Microsoft.Resources/deployments",
+      "apiVersion": "2021-04-01",
       "name": "linkedStorageDeployment",
+      "dependsOn": [
+        "tagsDeployment"
+      ],
       "properties": {
         "mode": "Incremental",
         "templateLink": {
@@ -27,7 +35,7 @@
         },
         "parameters": {
           "location": { "value": "[parameters('location')]" },
-          "tags": { "value": "[variables('tags')]" }
+          "tags": { "value": "[reference('tagsDeployment').outputs.tags.value]" }
         }
       }
     }

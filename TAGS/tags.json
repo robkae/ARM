@@ -9,9 +9,10 @@
     }
   },
   "outputs": {
-    "tagsOutput": {
+    "tags": {
       "type": "object",
       "value": "[variables('tags')]"
     }
-  }
+  },
+  "resources": []
 }

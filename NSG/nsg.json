@@ -27,7 +27,7 @@
       "properties": {
         "mode": "Incremental",
         "templateLink": {
-          "uri": "https://<your-storage-account>.blob.core.windows.net/templates/tags-template.json",
+          "uri": "https://github.com/robkae/ARM/blob/main/TAGS/tags.json",
           "contentVersion": "1.0.0.0"
         },
         "parameters": {

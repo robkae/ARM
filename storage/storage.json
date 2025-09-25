@@ -13,7 +13,7 @@
     {
       "type": "Microsoft.Storage/storageAccounts",
       "apiVersion": "2023-01-01",
-      "name": "[concat('st', uniqueString(resourceGroup().id))]",
+      "name": "[concat('vantage-', substring(uniqueString(resourceGroup().id), 0, 5))]",
       "location": "[parameters('location')]",
       "sku": {
         "name": "Standard_LRS"

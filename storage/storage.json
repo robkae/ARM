@@ -13,14 +13,14 @@
     {
       "type": "Microsoft.Storage/storageAccounts",
       "apiVersion": "2023-01-01",
-      "name": "[concat('freestorage', uniqueString(resourceGroup().id))]",
+      "name": "[concat('st', uniqueString(resourceGroup().id))]",
       "location": "[parameters('location')]",
       "sku": {
         "name": "Standard_LRS"
       },
       "kind": "StorageV2",
-      "properties": {},
-      "tags": "[parameters('tags')]"
+      "tags": "[parameters('tags')]",
+      "properties": {}
     }
   ]
 }

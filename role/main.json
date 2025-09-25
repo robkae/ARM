@@ -15,7 +15,7 @@
       "properties": {
         "mode": "Incremental",
         "templateLink": {
-          "uri": "https://raw.githubusercontent.com/robkae/ARM/refs/heads/main/tags/tags.json",
+          "uri": "https://raw.githubusercontent.com/robkae/ARM/refs/heads/main/TAGS/tags.json",
           "contentVersion": "1.0.0.0"
         }
       }

@@ -1,13 +1,17 @@
 {
-  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
   "contentVersion": "1.0.0.0",
-  "parameters": {
+  "variables": {
     "tags": {
-      "value": {
-        "Environment": "Dev",
-        "Owner": "CloudTeam",
-        "CostCenter": "FreeTier"
-      }
+      "Environment": "Dev",
+      "Owner": "CloudTeam",
+      "CostCenter": "FreeTier"
+    }
+  },
+  "outputs": {
+    "tagsOutput": {
+      "type": "object",
+      "value": "[variables('tags')]"
     }
   }
 }
